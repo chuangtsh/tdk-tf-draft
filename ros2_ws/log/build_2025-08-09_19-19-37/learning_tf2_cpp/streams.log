@@ -1,0 +1,39 @@
+[0.009s] Invoking command in '/home/user/ws/ros2_ws/build/learning_tf2_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ws/ros2_ws/build/learning_tf2_cpp -- -j20 -l20
+[0.046s] [35m[1mConsolidate compiler generated dependencies of target robots_sim[0m
+[0.055s] [ 25%] Built target static_turtle_tf2_broadcaster
+[0.056s] [ 37%] [32mBuilding CXX object CMakeFiles/robots_tfs.dir/src/robots_tfs.cpp.o[0m
+[0.057s] [ 62%] Built target turtle_tf2_broadcaster
+[0.060s] [ 87%] Built target robots_sim
+[4.719s] [100%] [32m[1mLinking CXX executable robots_tfs[0m
+[4.976s] [100%] Built target robots_tfs
+[4.984s] Invoked command in '/home/user/ws/ros2_ws/build/learning_tf2_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/ws/ros2_ws/build/learning_tf2_cpp -- -j20 -l20
+[4.992s] Invoking command in '/home/user/ws/ros2_ws/build/learning_tf2_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ws/ros2_ws/build/learning_tf2_cpp
+[4.996s] -- Install configuration: ""
+[4.996s] -- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/lib/learning_tf2_cpp/static_turtle_tf2_broadcaster
+[4.996s] -- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/lib/learning_tf2_cpp/turtle_tf2_broadcaster
+[4.996s] -- Installing: /home/user/ws/ros2_ws/install/learning_tf2_cpp/lib/learning_tf2_cpp/robots_tfs
+[4.998s] -- Set runtime path of "/home/user/ws/ros2_ws/install/learning_tf2_cpp/lib/learning_tf2_cpp/robots_tfs" to ""
+[4.998s] -- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/lib/learning_tf2_cpp/robots_sim
+[4.998s] -- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/launch
+[4.998s] -- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/launch/robot_tf.launch.py
+[4.999s] -- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/launch/turtle_tf2_demo.launch.py
+[4.999s] -- Installing: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/launch/robot_tf_with_sim.launch.py
+[4.999s] -- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/launch/sample.launch
+[4.999s] -- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/rviz
+[4.999s] -- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/rviz/robot_tf.rviz
+[4.999s] -- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/ament_index/resource_index/package_run_dependencies/learning_tf2_cpp
+[4.999s] -- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/ament_index/resource_index/parent_prefix_path/learning_tf2_cpp
+[4.999s] -- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/environment/ament_prefix_path.sh
+[4.999s] -- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/environment/ament_prefix_path.dsv
+[4.999s] -- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/environment/path.sh
+[4.999s] -- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/environment/path.dsv
+[4.999s] -- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/local_setup.bash
+[4.999s] -- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/local_setup.sh
+[4.999s] -- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/local_setup.zsh
+[4.999s] -- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/local_setup.dsv
+[4.999s] -- Installing: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/package.dsv
+[4.999s] -- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/ament_index/resource_index/packages/learning_tf2_cpp
+[4.999s] -- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/cmake/learning_tf2_cppConfig.cmake
+[4.999s] -- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/cmake/learning_tf2_cppConfig-version.cmake
+[4.999s] -- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/package.xml
+[5.000s] Invoked command in '/home/user/ws/ros2_ws/build/learning_tf2_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/user/ws/ros2_ws/build/learning_tf2_cpp

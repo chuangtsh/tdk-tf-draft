@@ -1,0 +1,96 @@
+[0.000000] (-) TimerEvent: {}
+[0.000398] (learning_tf2_cpp) JobQueued: {'identifier': 'learning_tf2_cpp', 'dependencies': OrderedDict()}
+[0.000471] (learning_tf2_cpp) JobStarted: {'identifier': 'learning_tf2_cpp'}
+[0.006121] (learning_tf2_cpp) JobProgress: {'identifier': 'learning_tf2_cpp', 'progress': 'cmake'}
+[0.007222] (learning_tf2_cpp) JobProgress: {'identifier': 'learning_tf2_cpp', 'progress': 'build'}
+[0.007270] (learning_tf2_cpp) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/user/ws/ros2_ws/build/learning_tf2_cpp', '--', '-j20', '-l20'], 'cwd': '/home/user/ws/ros2_ws/build/learning_tf2_cpp', 'env': OrderedDict([('HOSTNAME', 'WishingWell'), ('GIT_ASKPASS', '/home/user/.vscode-server/bin/c306e94f98122556ca081f527b466015e1bc37b0/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/user/.vscode-server/bin/c306e94f98122556ca081f527b466015e1bc37b0/bin/helpers/browser.sh'), ('HOME', '/home/user'), ('TERM_PROGRAM_VERSION', '1.102.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-5b81190e-4902-4710-9c69-c6a1c6a98375.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/user/.vscode-server/bin/c306e94f98122556ca081f527b466015e1bc37b0/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/user/.vscode-server/bin/c306e94f98122556ca081f527b466015e1bc37b0/node'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/home/user/ws/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-abc818ee-bdb1-4ce6-a0b7-1187c9d03500.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/user/.vscode-server/bin/c306e94f98122556ca081f527b466015e1bc37b0/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/user/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-abc818ee-bdb1-4ce6-a0b7-1187c9d03500.sock","/home/user/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('XAUTHORITY', '/root/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-674061379f.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-abc818ee-bdb1-4ce6-a0b7-1187c9d03500.sock'), ('AMENT_PREFIX_PATH', '/home/user/ws/ros2_ws/install/learning_tf2_cpp:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('ROS_WS', '/home/user/ws'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/user/ws/ros2_ws/build/learning_tf2_cpp'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/user/ws/ros2_ws/install/learning_tf2_cpp:/opt/ros/humble')]), 'shell': False}
+[0.046368] (learning_tf2_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target robots_sim\x1b[0m\n'}
+[0.055194] (learning_tf2_cpp) StdoutLine: {'line': b'[ 25%] Built target static_turtle_tf2_broadcaster\n'}
+[0.056278] (learning_tf2_cpp) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/robots_tfs.dir/src/robots_tfs.cpp.o\x1b[0m\n'}
+[0.057328] (learning_tf2_cpp) StdoutLine: {'line': b'[ 62%] Built target turtle_tf2_broadcaster\n'}
+[0.060102] (learning_tf2_cpp) StdoutLine: {'line': b'[ 87%] Built target robots_sim\n'}
+[0.099689] (-) TimerEvent: {}
+[0.199941] (-) TimerEvent: {}
+[0.300204] (-) TimerEvent: {}
+[0.400473] (-) TimerEvent: {}
+[0.500858] (-) TimerEvent: {}
+[0.601278] (-) TimerEvent: {}
+[0.701557] (-) TimerEvent: {}
+[0.801854] (-) TimerEvent: {}
+[0.902215] (-) TimerEvent: {}
+[1.002752] (-) TimerEvent: {}
+[1.103145] (-) TimerEvent: {}
+[1.203535] (-) TimerEvent: {}
+[1.303903] (-) TimerEvent: {}
+[1.404247] (-) TimerEvent: {}
+[1.504481] (-) TimerEvent: {}
+[1.604829] (-) TimerEvent: {}
+[1.705133] (-) TimerEvent: {}
+[1.805489] (-) TimerEvent: {}
+[1.905730] (-) TimerEvent: {}
+[2.006010] (-) TimerEvent: {}
+[2.106404] (-) TimerEvent: {}
+[2.206805] (-) TimerEvent: {}
+[2.307194] (-) TimerEvent: {}
+[2.407567] (-) TimerEvent: {}
+[2.507842] (-) TimerEvent: {}
+[2.608162] (-) TimerEvent: {}
+[2.708463] (-) TimerEvent: {}
+[2.808866] (-) TimerEvent: {}
+[2.909231] (-) TimerEvent: {}
+[3.009568] (-) TimerEvent: {}
+[3.109909] (-) TimerEvent: {}
+[3.210259] (-) TimerEvent: {}
+[3.310504] (-) TimerEvent: {}
+[3.410831] (-) TimerEvent: {}
+[3.511056] (-) TimerEvent: {}
+[3.611409] (-) TimerEvent: {}
+[3.711709] (-) TimerEvent: {}
+[3.811974] (-) TimerEvent: {}
+[3.912324] (-) TimerEvent: {}
+[4.012688] (-) TimerEvent: {}
+[4.112947] (-) TimerEvent: {}
+[4.213285] (-) TimerEvent: {}
+[4.313596] (-) TimerEvent: {}
+[4.413938] (-) TimerEvent: {}
+[4.514281] (-) TimerEvent: {}
+[4.614598] (-) TimerEvent: {}
+[4.714947] (-) TimerEvent: {}
+[4.719781] (learning_tf2_cpp) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable robots_tfs\x1b[0m\n'}
+[4.815142] (-) TimerEvent: {}
+[4.915478] (-) TimerEvent: {}
+[4.976657] (learning_tf2_cpp) StdoutLine: {'line': b'[100%] Built target robots_tfs\n'}
+[4.984280] (learning_tf2_cpp) CommandEnded: {'returncode': 0}
+[4.985320] (learning_tf2_cpp) JobProgress: {'identifier': 'learning_tf2_cpp', 'progress': 'install'}
+[4.992376] (learning_tf2_cpp) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/user/ws/ros2_ws/build/learning_tf2_cpp'], 'cwd': '/home/user/ws/ros2_ws/build/learning_tf2_cpp', 'env': OrderedDict([('HOSTNAME', 'WishingWell'), ('GIT_ASKPASS', '/home/user/.vscode-server/bin/c306e94f98122556ca081f527b466015e1bc37b0/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/user/.vscode-server/bin/c306e94f98122556ca081f527b466015e1bc37b0/bin/helpers/browser.sh'), ('HOME', '/home/user'), ('TERM_PROGRAM_VERSION', '1.102.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-5b81190e-4902-4710-9c69-c6a1c6a98375.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/user/.vscode-server/bin/c306e94f98122556ca081f527b466015e1bc37b0/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/user/.vscode-server/bin/c306e94f98122556ca081f527b466015e1bc37b0/node'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/home/user/ws/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-abc818ee-bdb1-4ce6-a0b7-1187c9d03500.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/user/.vscode-server/bin/c306e94f98122556ca081f527b466015e1bc37b0/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/user/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-abc818ee-bdb1-4ce6-a0b7-1187c9d03500.sock","/home/user/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('XAUTHORITY', '/root/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-674061379f.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-abc818ee-bdb1-4ce6-a0b7-1187c9d03500.sock'), ('AMENT_PREFIX_PATH', '/home/user/ws/ros2_ws/install/learning_tf2_cpp:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('ROS_WS', '/home/user/ws'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/user/ws/ros2_ws/build/learning_tf2_cpp'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/user/ws/ros2_ws/install/learning_tf2_cpp:/opt/ros/humble')]), 'shell': False}
+[4.996400] (learning_tf2_cpp) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[4.996501] (learning_tf2_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/lib/learning_tf2_cpp/static_turtle_tf2_broadcaster\n'}
+[4.996535] (learning_tf2_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/lib/learning_tf2_cpp/turtle_tf2_broadcaster\n'}
+[4.996561] (learning_tf2_cpp) StdoutLine: {'line': b'-- Installing: /home/user/ws/ros2_ws/install/learning_tf2_cpp/lib/learning_tf2_cpp/robots_tfs\n'}
+[4.998801] (learning_tf2_cpp) StdoutLine: {'line': b'-- Set runtime path of "/home/user/ws/ros2_ws/install/learning_tf2_cpp/lib/learning_tf2_cpp/robots_tfs" to ""\n'}
+[4.998880] (learning_tf2_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/lib/learning_tf2_cpp/robots_sim\n'}
+[4.998913] (learning_tf2_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/launch\n'}
+[4.998943] (learning_tf2_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/launch/robot_tf.launch.py\n'}
+[4.998972] (learning_tf2_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/launch/turtle_tf2_demo.launch.py\n'}
+[4.999241] (learning_tf2_cpp) StdoutLine: {'line': b'-- Installing: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/launch/robot_tf_with_sim.launch.py\n'}
+[4.999283] (learning_tf2_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/launch/sample.launch\n'}
+[4.999312] (learning_tf2_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/rviz\n'}
+[4.999338] (learning_tf2_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/rviz/robot_tf.rviz\n'}
+[4.999363] (learning_tf2_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/ament_index/resource_index/package_run_dependencies/learning_tf2_cpp\n'}
+[4.999388] (learning_tf2_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/ament_index/resource_index/parent_prefix_path/learning_tf2_cpp\n'}
+[4.999414] (learning_tf2_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/environment/ament_prefix_path.sh\n'}
+[4.999446] (learning_tf2_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/environment/ament_prefix_path.dsv\n'}
+[4.999470] (learning_tf2_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/environment/path.sh\n'}
+[4.999494] (learning_tf2_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/environment/path.dsv\n'}
+[4.999518] (learning_tf2_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/local_setup.bash\n'}
+[4.999543] (learning_tf2_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/local_setup.sh\n'}
+[4.999568] (learning_tf2_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/local_setup.zsh\n'}
+[4.999592] (learning_tf2_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/local_setup.dsv\n'}
+[4.999616] (learning_tf2_cpp) StdoutLine: {'line': b'-- Installing: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/package.dsv\n'}
+[4.999640] (learning_tf2_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/ament_index/resource_index/packages/learning_tf2_cpp\n'}
+[4.999663] (learning_tf2_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/cmake/learning_tf2_cppConfig.cmake\n'}
+[4.999687] (learning_tf2_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/cmake/learning_tf2_cppConfig-version.cmake\n'}
+[4.999716] (learning_tf2_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/user/ws/ros2_ws/install/learning_tf2_cpp/share/learning_tf2_cpp/package.xml\n'}
+[5.000567] (learning_tf2_cpp) CommandEnded: {'returncode': 0}
+[5.012332] (learning_tf2_cpp) JobEnded: {'identifier': 'learning_tf2_cpp', 'rc': 0}
+[5.012678] (-) EventReactorShutdown: {}

@@ -1,0 +1,29 @@
+name: ros2_self_learning
+services:
+  ros2:
+    build:
+      context: .
+      args:
+        USERNAME: user
+    image: ros2
+    container_name: kesler-ros2
+    stdin_open: true
+    tty: true
+    network_mode: host
+    stop_grace_period: 1s
+    working_dir: /home/user/ros2_self
+    environment:
+      - ROS_DOMAIN_ID=25
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+      - XAUTHORITY=/root/.Xauthority
+      - ROS_WS=/home/user/ros2_self
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw      
+      - $HOME/.Xauthority:/root/.Xauthority:rw
+      - /dev/shm:/dev/shm
+      - ../ros2_ws:/home/user/ros2_self
+    user: root
+    command: bash

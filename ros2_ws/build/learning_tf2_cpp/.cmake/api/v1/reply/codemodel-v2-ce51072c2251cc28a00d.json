@@ -1,0 +1,106 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-023ee9f56dcac0d7012e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "learning_tf2_cpp",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "learning_tf2_cpp_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-learning_tf2_cpp_uninstall-0ae44cf7a34219ce0142.json",
+					"name" : "learning_tf2_cpp_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robots_sim::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robots_sim-2abd8c49f9e6d1783367.json",
+					"name" : "robots_sim",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robots_tfs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robots_tfs-14e447187829ae9eaf8b.json",
+					"name" : "robots_tfs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "static_turtle_tf2_broadcaster::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-static_turtle_tf2_broadcaster-9b9a2bea0476b47e83da.json",
+					"name" : "static_turtle_tf2_broadcaster",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "turtle_tf2_broadcaster::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-turtle_tf2_broadcaster-fc5ae0470bd314a69bb6.json",
+					"name" : "turtle_tf2_broadcaster",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-8a3ccfbbb83a7ca8ac4a.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/user/ws/ros2_ws/build/learning_tf2_cpp",
+		"source" : "/home/user/ws/ros2_ws/src/learning_tf2_cpp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
