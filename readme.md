@@ -16,3 +16,10 @@
 
 
 十分推薦用AI寫tf，效率極高
+
+
+# usage
+`ros2 launch learning_tf2_cpp robot_tf_with_sim.launch.py`
+另外一個terminal
+`ros2 run learning_tf2_cpp robots_sim`
+在這個terminal用鍵盤模擬，模你的方式註解在上面那個launch
