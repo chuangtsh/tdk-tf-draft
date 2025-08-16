@@ -102,12 +102,19 @@ def generate_launch_description():
         ),
 
         Node(
+            package='learning_tf2_cpp',
+            executable='camera_displacement_publisher',
+            name='camera_displacement_publisher',
+            output='screen'
+        ),
+
+        Node(
             package='rviz2',
             executable='rviz2',
             name='rviz2',
             condition=IfCondition(LaunchConfiguration('start_rviz')),
             output='screen'
-        ),
+        )
     ])
 
 

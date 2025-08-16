@@ -58,7 +58,6 @@ ENV TERM=xterm-256color
 USER $USERNAME
 
 RUN mkdir -p /home/user/ws
-RUN echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 
 WORKDIR /home/$USERNAME/ws
 

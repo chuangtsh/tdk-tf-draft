@@ -32,13 +32,13 @@ public:
         this->declare_parameter("camera_pitch", 0.0);
         this->declare_parameter("camera_yaw", 0.0);
         
-        // Map static transform (world -> map) - robot starting position
-        this->declare_parameter("map_x", 0.0);
-        this->declare_parameter("map_y", 0.0);
-        this->declare_parameter("map_z", 0.0);
-        this->declare_parameter("map_roll", 0.0);
-        this->declare_parameter("map_pitch", 0.0);
-        this->declare_parameter("map_yaw", 0.0);
+        // Map static transform (map -> odom) - robot starting position
+        this->declare_parameter("odom_x", 0.0);
+        this->declare_parameter("odom_y", 0.0);
+        this->declare_parameter("odom_z", 0.0);
+        this->declare_parameter("odom_roll", 0.0);
+        this->declare_parameter("odom_pitch", 0.0);
+        this->declare_parameter("odom_yaw", 0.0);
 
         // Create subscriptions for dynamic transforms
         robot_pose_subscription_ = this->create_subscription<geometry_msgs::msg::Pose>(
@@ -70,12 +70,12 @@ public:
 private:
     void publish_default_transforms()
     {
-        // Always publish map -> robot_center transform (will be overridden by odom if available)
+        // Always publish odom -> base_link transform (will be overridden by odom if available)
         if (!robot_pose_received_) {
             geometry_msgs::msg::TransformStamped t;
             t.header.stamp = this->get_clock()->now();
-            t.header.frame_id = "map";
-            t.child_frame_id = "robot_center";
+            t.header.frame_id = "odom";
+            t.child_frame_id = "base_link";
             t.transform.translation.x = 0.0;
             t.transform.translation.y = 0.0;
             t.transform.translation.z = 0.0;
@@ -83,11 +83,11 @@ private:
             tf_broadcaster_->sendTransform(t);
         }
 
-        // Always publish robot_center -> lift_base transform (will be overridden if available)
+        // Always publish base_link -> lift_base transform (will be overridden if available)
         if (!lift_base_received_) {
             geometry_msgs::msg::TransformStamped t;
             t.header.stamp = this->get_clock()->now();
-            t.header.frame_id = "robot_center";
+            t.header.frame_id = "base_link";
             t.child_frame_id = "lift_base";
             t.transform.translation.x = 0.0;
             t.transform.translation.y = 0.0;
@@ -130,7 +130,7 @@ private:
 
         // Set header
         t.header.stamp = this->get_clock()->now();
-        t.header.frame_id = "robot_center";
+        t.header.frame_id = "base_link";
         t.child_frame_id = "lift_base";
 
         // Set translation
@@ -151,8 +151,8 @@ private:
 
         // Set header
         t.header.stamp = this->get_clock()->now();
-        t.header.frame_id = "map";
-        t.child_frame_id = "robot_center";
+        t.header.frame_id = "odom";
+        t.child_frame_id = "base_link";
 
         // Set translation
         t.transform.translation.x = msg->position.x;
@@ -212,41 +212,41 @@ private:
 
     void publish_static_transforms()
     {
-        // Publish world -> map static transform (robot starting position)
-        geometry_msgs::msg::TransformStamped world_to_map_transform;
+        // Publish map -> odom static transform (robot starting position)
+        geometry_msgs::msg::TransformStamped map_to_odom_transform;
         
-        // Get map parameters
-        double map_x = this->get_parameter("map_x").as_double();
-        double map_y = this->get_parameter("map_y").as_double();
-        double map_z = this->get_parameter("map_z").as_double();
-        double map_roll = this->get_parameter("map_roll").as_double();
-        double map_pitch = this->get_parameter("map_pitch").as_double();
-        double map_yaw = this->get_parameter("map_yaw").as_double();
+        // Get odom parameters
+        double odom_x = this->get_parameter("odom_x").as_double();
+        double odom_y = this->get_parameter("odom_y").as_double();
+        double odom_z = this->get_parameter("odom_z").as_double();
+        double odom_roll = this->get_parameter("odom_roll").as_double();
+        double odom_pitch = this->get_parameter("odom_pitch").as_double();
+        double odom_yaw = this->get_parameter("odom_yaw").as_double();
 
-        // Set header for world -> map
-        world_to_map_transform.header.stamp = this->get_clock()->now();
-        world_to_map_transform.header.frame_id = "world";
-        world_to_map_transform.child_frame_id = "map";
+        // Set header for map -> odom
+        map_to_odom_transform.header.stamp = this->get_clock()->now();
+        map_to_odom_transform.header.frame_id = "map";
+        map_to_odom_transform.child_frame_id = "odom";
 
         // Set translation
-        world_to_map_transform.transform.translation.x = map_x;
-        world_to_map_transform.transform.translation.y = map_y;
-        world_to_map_transform.transform.translation.z = map_z;
+        map_to_odom_transform.transform.translation.x = odom_x;
+        map_to_odom_transform.transform.translation.y = odom_y;
+        map_to_odom_transform.transform.translation.z = odom_z;
 
         // Convert RPY to quaternion
-        tf2::Quaternion map_q;
-        map_q.setRPY(map_roll, map_pitch, map_yaw);
-        world_to_map_transform.transform.rotation.x = map_q.x();
-        world_to_map_transform.transform.rotation.y = map_q.y();
-        world_to_map_transform.transform.rotation.z = map_q.z();
-        world_to_map_transform.transform.rotation.w = map_q.w();
+        tf2::Quaternion odom_q;
+        odom_q.setRPY(odom_roll, odom_pitch, odom_yaw);
+        map_to_odom_transform.transform.rotation.x = odom_q.x();
+        map_to_odom_transform.transform.rotation.y = odom_q.y();
+        map_to_odom_transform.transform.rotation.z = odom_q.z();
+        map_to_odom_transform.transform.rotation.w = odom_q.w();
 
-        // Send world -> map static transform
-        static_tf_broadcaster_->sendTransform(world_to_map_transform);
+        // Send map -> odom static transform
+        static_tf_broadcaster_->sendTransform(map_to_odom_transform);
 
         RCLCPP_INFO(this->get_logger(), 
-            "Published static transform from world to map: [%.3f, %.3f, %.3f]",
-            map_x, map_y, map_z);
+            "Published static transform from map to odom: [%.3f, %.3f, %.3f]",
+            odom_x, odom_y, odom_z);
 
         // Publish arm_end -> camera static transform
         geometry_msgs::msg::TransformStamped camera_transform;

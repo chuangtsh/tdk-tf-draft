@@ -1,0 +1,8 @@
+# Request - no input parameters needed
+# The service will calculate the displacement from camera to robot_center
+
+---
+# Response
+bool success
+geometry_msgs/Pose displacement
+float64 distance
