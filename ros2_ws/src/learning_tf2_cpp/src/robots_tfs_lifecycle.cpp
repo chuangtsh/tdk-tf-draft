@@ -31,22 +31,46 @@ public:
     {
         RCLCPP_INFO(this->get_logger(), "Configuring Robot TF Broadcaster Lifecycle node");
 
-        // Declare parameters for static transforms
+        // Declare parameters for static transforms only if they don't exist
         // Camera static transform (arm_end -> camera)
-        this->declare_parameter("camera_x", 0.1);
-        this->declare_parameter("camera_y", 0.0);
-        this->declare_parameter("camera_z", 0.05);
-        this->declare_parameter("camera_roll", 0.0);
-        this->declare_parameter("camera_pitch", 0.0);
-        this->declare_parameter("camera_yaw", 0.0);
+        if (!this->has_parameter("camera_x")) {
+            this->declare_parameter("camera_x", 0.1);
+        }
+        if (!this->has_parameter("camera_y")) {
+            this->declare_parameter("camera_y", 0.0);
+        }
+        if (!this->has_parameter("camera_z")) {
+            this->declare_parameter("camera_z", 0.05);
+        }
+        if (!this->has_parameter("camera_roll")) {
+            this->declare_parameter("camera_roll", 0.0);
+        }
+        if (!this->has_parameter("camera_pitch")) {
+            this->declare_parameter("camera_pitch", 0.0);
+        }
+        if (!this->has_parameter("camera_yaw")) {
+            this->declare_parameter("camera_yaw", 0.0);
+        }
         
         // Map static transform (map -> odom) - robot starting position
-        this->declare_parameter("odom_x", 0.0);
-        this->declare_parameter("odom_y", 0.0);
-        this->declare_parameter("odom_z", 0.0);
-        this->declare_parameter("odom_roll", 0.0);
-        this->declare_parameter("odom_pitch", 0.0);
-        this->declare_parameter("odom_yaw", 0.0);
+        if (!this->has_parameter("odom_x")) {
+            this->declare_parameter("odom_x", 0.0);
+        }
+        if (!this->has_parameter("odom_y")) {
+            this->declare_parameter("odom_y", 0.0);
+        }
+        if (!this->has_parameter("odom_z")) {
+            this->declare_parameter("odom_z", 0.0);
+        }
+        if (!this->has_parameter("odom_roll")) {
+            this->declare_parameter("odom_roll", 0.0);
+        }
+        if (!this->has_parameter("odom_pitch")) {
+            this->declare_parameter("odom_pitch", 0.0);
+        }
+        if (!this->has_parameter("odom_yaw")) {
+            this->declare_parameter("odom_yaw", 0.0);
+        }
 
         // Initialize transform broadcasters
         tf_broadcaster_ = std::make_unique<tf2_ros::TransformBroadcaster>(*this);
@@ -142,15 +166,17 @@ public:
         arm_base_subscription_.reset();
         arm_end_subscription_.reset();
         timer_.reset();
+        shutdown_timer_.reset();
         tf_broadcaster_.reset();
         static_tf_broadcaster_.reset();
 
+        // Reset flags
+        robot_pose_received_ = false;
+        lift_base_received_ = false;
+        arm_base_received_ = false;
+        arm_end_received_ = false;
+
         RCLCPP_INFO(this->get_logger(), "Robot TF Broadcaster Lifecycle node shut down successfully");
-        
-        // Create a timer to terminate the node after a short delay
-        // This allows the shutdown response to be sent before termination
-        shutdown_timer_ = this->create_wall_timer(
-            100ms, std::bind(&RobotTfBroadcasterLifecycle::terminate_node, this));
         
         return CallbackReturn::SUCCESS;
     }
@@ -338,13 +364,6 @@ private:
         RCLCPP_INFO(this->get_logger(), 
             "Published static transform from arm_end to camera: [%.3f, %.3f, %.3f]",
             camera_x, camera_y, camera_z);
-    }
-
-    void terminate_node()
-    {
-        RCLCPP_INFO(this->get_logger(), "Terminating node process...");
-        rclcpp::shutdown();
-        std::exit(0);
     }
 
     // Subscriptions and publishers

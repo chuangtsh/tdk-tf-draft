@@ -13,18 +13,22 @@ find_package(lifecycle_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 
+# Add executable
 add_executable(main_flow src/main_flow.cpp)
-ament_target_dependencies(
-    main_flow
-    geometry_msgs
-    lifecycle_msgs
-    rclcpp
-    rclcpp_lifecycle
+
+# Specify libraries to link against
+ament_target_dependencies(main_flow 
+  rclcpp 
+  std_msgs 
+  lifecycle_msgs
+  geometry_msgs
 )
 
+# Install executables
 install(TARGETS
-    main_flow
-    DESTINATION lib/${PROJECT_NAME})
+  main_flow
+  DESTINATION lib/${PROJECT_NAME}
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
