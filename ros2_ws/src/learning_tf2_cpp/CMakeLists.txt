@@ -9,7 +9,9 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(interfaces REQUIRED)
+find_package(lifecycle_msgs REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(rclcpp_lifecycle REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(turtlesim REQUIRED)
@@ -24,6 +26,18 @@ ament_target_dependencies(
     tf2
     tf2_ros
 )
+
+add_executable(robots_tfs_lifecycle src/robots_tfs_lifecycle.cpp)
+ament_target_dependencies(
+    robots_tfs_lifecycle
+    geometry_msgs
+    lifecycle_msgs
+    rclcpp
+    rclcpp_lifecycle
+    tf2
+    tf2_ros
+)
+
 
 add_executable(robots_sim src/robots_sim.cpp)
 ament_target_dependencies(
@@ -47,6 +61,7 @@ ament_target_dependencies(
 
 install(TARGETS
     robots_tfs
+    robots_tfs_lifecycle
     DESTINATION lib/${PROJECT_NAME})
 
 install(TARGETS
